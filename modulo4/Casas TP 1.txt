@@ -1,0 +1,761 @@
+Ejercicio 1)
+
+import java.util.Scanner;
+
+public class EvaluacionesAlumno {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese la nota de la primera evaluación: ");
+        double nota1 = scanner.nextDouble();
+        
+        System.out.println("Ingrese la nota de la segunda evaluación: ");
+        double nota2 = scanner.nextDouble();
+        
+        System.out.println("Ingrese la nota de la tercera evaluación: ");
+        double nota3 = scanner.nextDouble();
+        
+        double promedio = (nota1 + nota2 + nota3) / 3;
+        
+        if (promedio >= 7) {
+            System.out.println("El alumno está aprobado con un promedio de " + promedio);
+        } else {
+            System.out.println("El alumno está reprobado con un promedio de " + promedio);
+        }
+        
+        scanner.close();
+    }
+}
+
+
+Ejercicio 2)
+
+import java.util.Scanner;
+
+public class ParImpar {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese un número entero: ");
+        int numero = scanner.nextInt();
+        
+        if (numero % 2 == 0) {
+            System.out.println("El número ingresado es par.");
+        } else {
+            System.out.println("El número ingresado es impar.");
+        }
+        
+        scanner.close();
+    }
+}
+
+
+Ejercicio 3)
+
+import java.util.Scanner;
+
+public class CantidadDiasMes {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese el nombre de un mes: ");
+        String nombreMes = scanner.nextLine();
+
+        int cantidadDias;
+
+        if (nombreMes.equalsIgnoreCase("enero") || nombreMes.equalsIgnoreCase("marzo") ||
+                nombreMes.equalsIgnoreCase("mayo") || nombreMes.equalsIgnoreCase("julio") ||
+                nombreMes.equalsIgnoreCase("agosto") || nombreMes.equalsIgnoreCase("octubre") ||
+                nombreMes.equalsIgnoreCase("diciembre")) {
+            cantidadDias = 31;
+        } else if (nombreMes.equalsIgnoreCase("febrero")) {
+            cantidadDias = 28;
+        } else {
+            cantidadDias = 30;
+        }
+
+        System.out.println("El mes " + nombreMes + " tiene " + cantidadDias + " días.");
+
+        scanner.close();
+    }
+}
+
+
+Ejercicio 4)
+
+import java.util.Scanner;
+
+public class CategoriaFamiliar {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese una categoría (a, b o c): ");
+        String categoria = scanner.nextLine();
+        
+        if (categoria.equalsIgnoreCase("a")) {
+            System.out.println("Hijo");
+        } else if (categoria.equalsIgnoreCase("b")) {
+            System.out.println("Padres");
+        } else if (categoria.equalsIgnoreCase("c")) {
+            System.out.println("Abuelos");
+        } else {
+            System.out.println("Categoría inválida");
+        }
+        
+        scanner.close();
+    }
+}
+
+
+Ejercicio 5)
+
+import java.util.Scanner;
+
+public class PuestoTorneo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese el puesto obtenido (1, 2 o 3): ");
+        int puesto = scanner.nextInt();
+        
+        if (puesto == 1) {
+            System.out.println("Medalla de oro");
+        } else if (puesto == 2) {
+            System.out.println("Medalla de plata");
+        } else if (puesto == 3) {
+            System.out.println("Medalla de bronce");
+        } else {
+            System.out.println("Siga participando");
+        }
+        
+        scanner.close();
+    }
+}
+
+
+
+Ejercicio 6)
+
+import java.util.Scanner;
+
+public class TipoCurso {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese el número del curso: ");
+        int curso = scanner.nextInt();
+        
+        if (curso == 0) {
+            System.out.println("Jardín de infantes");
+        } else if (curso >= 1 && curso <= 6) {
+            System.out.println("Primaria");
+        } else if (curso >= 7 && curso <= 12) {
+            System.out.println("Secundaria");
+        } else {
+            System.out.println("Curso inválido");
+        }
+        
+        scanner.close();
+    }
+}
+
+
+Ejercicio 7)
+import java.util.Scanner;
+
+public class MayorDeTres {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese el primer número: ");
+        int numero1 = scanner.nextInt();
+        
+        System.out.println("Ingrese el segundo número: ");
+        int numero2 = scanner.nextInt();
+        
+        System.out.println("Ingrese el tercer número: ");
+        int numero3 = scanner.nextInt();
+        
+        int mayor;
+        
+        if (numero1 >= numero2) {
+            if (numero1 >= numero3) {
+                mayor = numero1;
+            } else {
+                mayor = numero3;
+            }
+        } else {
+            if (numero2 >= numero3) {
+                mayor = numero2;
+            } else {
+                mayor = numero3;
+            }
+        }
+        
+        System.out.println("El número mayor es: " + mayor);
+        
+        scanner.close();
+    }
+}
+
+
+Ejercicio8)
+import java.util.Scanner;
+
+public class PiedraPapelTijera {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Jugador 1, ingrese su elección (0: piedra, 1: papel, 2: tijera): ");
+        int eleccionJugador1 = scanner.nextInt();
+        
+        System.out.println("Jugador 2, ingrese su elección (0: piedra, 1: papel, 2: tijera): ");
+        int eleccionJugador2 = scanner.nextInt();
+        
+        String ganador;
+        
+        if (eleccionJugador1 == eleccionJugador2) {
+            ganador = "Empate";
+        } else if (eleccionJugador1 == 0) { // Jugador 1 elige piedra
+            if (eleccionJugador2 == 1) {
+                ganador = "Jugador 2";
+            } else {
+                ganador = "Jugador 1";
+            }
+        } else if (eleccionJugador1 == 1) { // Jugador 1 elige papel
+            if (eleccionJugador2 == 0) {
+                ganador = "Jugador 1";
+            } else {
+                ganador = "Jugador 2";
+            }
+        } else { // Jugador 1 elige tijera
+            if (eleccionJugador2 == 0) {
+                ganador = "Jugador 2";
+            } else {
+                ganador = "Jugador 1";
+            }
+        }
+        
+        System.out.println("El ganador es: " + ganador);
+        
+        scanner.close();
+    }
+}
+
+
+Ejercicio 9)
+import java.util.Scanner;
+
+public class PiedraPapelTijera {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Jugador 1, ingrese su elección (0: piedra, 1: papel, 2: tijera): ");
+        int eleccionJugador1 = scanner.nextInt();
+        
+        System.out.println("Jugador 2, ingrese su elección (0: piedra, 1: papel, 2: tijera): ");
+        int eleccionJugador2 = scanner.nextInt();
+        
+        String ganador;
+        
+        if ((eleccionJugador1 == 0 && eleccionJugador2 == 2) ||
+            (eleccionJugador1 == 1 && eleccionJugador2 == 0) ||
+            (eleccionJugador1 == 2 && eleccionJugador2 == 1)) {
+            ganador = "Jugador 1";
+        } else if ((eleccionJugador2 == 0 && eleccionJugador1 == 2) ||
+                   (eleccionJugador2 == 1 && eleccionJugador1 == 0) ||
+                   (eleccionJugador2 == 2 && eleccionJugador1 == 1)) {
+            ganador = "Jugador 2";
+        } else {
+            ganador = "Empate";
+        }
+        
+        System.out.println("El ganador es: " + ganador);
+        
+        scanner.close();
+    }
+}
+
+
+Ejercicio 10)
+import java.util.Scanner;
+
+public class MayorDeTres {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese el valor de la primera variable: ");
+        int variable1 = scanner.nextInt();
+        
+        System.out.println("Ingrese el valor de la segunda variable: ");
+        int variable2 = scanner.nextInt();
+        
+        System.out.println("Ingrese el valor de la tercera variable: ");
+        int variable3 = scanner.nextInt();
+        
+        int mayor;
+        
+        if (variable1 >= variable2 && variable1 >= variable3) {
+            mayor = variable1;
+        } else if (variable2 >= variable1 && variable2 >= variable3) {
+            mayor = variable2;
+        } else {
+            mayor = variable3;
+        }
+        
+        System.out.println("La variable mayor es: " + mayor);
+        
+        scanner.close();
+    }
+}
+
+
+Ejercicio 11)
+import java.util.Scanner;
+
+public class VocalONo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese un carácter: ");
+        char caracter = scanner.next().charAt(0);
+        
+        if (caracter == 'a' || caracter == 'e' || caracter == 'i' || caracter == 'o' || caracter == 'u' ||
+            caracter == 'A' || caracter == 'E' || caracter == 'I' || caracter == 'O' || caracter == 'U') {
+            System.out.println("El carácter ingresado es una vocal.");
+        } else {
+            System.out.println("El carácter ingresado no es una vocal.");
+        }
+        
+        scanner.close();
+    }
+}
+
+
+Ejercicio 12)
+import java.util.Scanner;
+
+public class AsignacionDocena {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese un número: ");
+        int numero = scanner.nextInt();
+        
+        if (numero >= 1 && numero <= 12) {
+            System.out.println("El número " + numero + " pertenece a la primer docena.");
+        } else if (numero >= 13 && numero <= 24) {
+            System.out.println("El número " + numero + " pertenece a la segunda docena.");
+        } else if (numero >= 25 && numero <= 36) {
+            System.out.println("El número " + numero + " pertenece a la tercer docena.");
+        } else {
+            System.out.println("El número " + numero + " está fuera de rango.");
+        }
+        
+        scanner.close();
+    }
+}
+
+
+Ejercicio 13)
+import java.util.Scanner;
+
+public class CantidadDiasMes {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese el nombre de un mes: ");
+        String nombreMes = scanner.nextLine().toLowerCase();
+
+        int cantidadDias;
+
+        switch (nombreMes) {
+            case "enero":
+            case "marzo":
+            case "mayo":
+            case "julio":
+            case "agosto":
+            case "octubre":
+            case "diciembre":
+                cantidadDias = 31;
+                break;
+            case "abril":
+            case "junio":
+            case "septiembre":
+            case "noviembre":
+                cantidadDias = 30;
+                break;
+            case "febrero":
+                cantidadDias = 28;
+                break;
+            default:
+                cantidadDias = -1; // Valor por defecto en caso de ingresar un nombre de mes inválido
+                break;
+        }
+
+        if (cantidadDias != -1) {
+            System.out.println("El mes de " + nombreMes + " tiene " + cantidadDias + " días.");
+        } else {
+            System.out.println("Nombre de mes inválido.");
+        }
+
+        scanner.close();
+    }
+}
+
+******//Duda del If*******
+
+Ejercicio 14)
+import java.util.Scanner;
+
+public class PuestoTorneo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese el puesto obtenido en el torneo: ");
+        int puesto = scanner.nextInt();
+
+        String mensaje;
+
+        switch (puesto) {
+            case 1:
+                mensaje = "Medalla de oro";
+                break;
+            case 2:
+                mensaje = "Medalla de plata";
+                break;
+            case 3:
+                mensaje = "Medalla de bronce";
+                break;
+            default:
+                mensaje = "Siga participando";
+                break;
+        }
+
+        System.out.println(mensaje);
+
+        scanner.close();
+    }
+}
+
+
+Ejercicio 15)
+public class CaracteristicasAuto {
+    public static void main(String[] args) {
+        char claseAuto = 'b';
+
+        switch (claseAuto) {
+            case 'a':
+                System.out.println("Clase A - 4 ruedas y un motor");
+                break;
+            case 'b':
+                System.out.println("Clase B - 4 ruedas, un motor, cierre centralizado y aire");
+                break;
+            case 'c':
+                System.out.println("Clase C - 4 ruedas, un motor, cierre centralizado, aire y airbag");
+                break;
+            default:
+                System.out.println("Clase no reconocida");
+                break;
+        }
+    }
+}
+
+
+Ciclos
+
+Ejercicio 16)
+import java.util.Scanner;
+
+public class ejercicio16 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese un número para mostrar la tabla de multiplicar: ");
+        int numero = scanner.nextInt();
+
+        System.out.println("Tabla de multiplicar del número " + numero + ":");
+
+        for (int i = 1; i <= 10; i++) {
+            int resultado = numero * i;
+            System.out.println(numero + " x " + i + " = " + resultado);
+        }
+
+        scanner.close();
+    }
+}
+
+
+Ejercicio 17)
+
+****Utilizando If:*****
+
+import java.util.Scanner;
+
+public class ejercicio17 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese un número para mostrar la tabla de multiplicar:");
+        int numero = scanner.nextInt();
+
+        System.out.println("Tabla de multiplicar del número " + numero + ":");
+
+        int sumaPares = 0;
+
+        for (int i = 1; i <= 10; i++) {
+            int resultado = numero * i;
+            System.out.println(numero + " x " + i + " = " + resultado);
+
+            if (resultado % 2 == 0) {
+                sumaPares += resultado;
+            }
+        }
+
+        System.out.println("La suma de los valores pares es: " + sumaPares);
+
+        scanner.close();
+    }
+}
+
+
+****Sin utilizar If, a través de un algoritmo:****
+
+import java.util.Scanner;
+
+public class TablaMultiplicarConSumaParesSinIf {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese un número para mostrar la tabla de multiplicar:");
+        int numero = scanner.nextInt();
+
+        System.out.println("Tabla de multiplicar del número " + numero + ":");
+
+        int sumaPares = 0;
+
+        for (int i = 1; i <= 10; i++) {
+            int resultado = numero * i;
+            System.out.println(numero + " x " + i + " = " + resultado);
+
+            sumaPares += resultado - (resultado % 2 == 1 ? resultado : 0);
+        }
+
+        System.out.println("La suma de los valores pares es: " + sumaPares);
+
+        scanner.close();
+    }
+}
+
+
+
+Ejercicio 18)
+import java.util.Scanner;
+
+public class ejercicio18 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese un número para mostrar la tabla de multiplicar:");
+        int numero = scanner.nextInt();
+
+        System.out.println("Tabla de multiplicar del número " + numero + ":");
+        for (int i = 1; i <= 10; i++) {
+            int resultado = numero * i;
+            System.out.println(numero + " x " + i + " = " + resultado);
+        }
+
+        System.out.println("Suma de los valores pares:");
+        int sumaPares = 0;
+        for (int i = 1; i <= 10; i++) {
+            int resultado = numero * i;
+            if (resultado % 2 == 0) {
+                sumaPares += resultado;
+            }
+        }
+        System.out.println("La suma de los valores pares es: " + sumaPares);
+
+        scanner.close();
+    }
+}
+
+
+Ejercicio 19)
+import java.util.Random;
+
+public class ejercicio19 {
+    public static void main(String[] args) {
+        Random random = new Random();
+
+        int contador = 0;
+        int suma = 0;
+
+        while (contador < 10) {
+            int numero = random.nextInt(100); // Genera un número aleatorio entre 0 y 99
+            System.out.println("Número generado: " + numero);
+
+            suma += numero;
+            contador++;
+        }
+
+        double promedio = suma / 10.0; // Calcula el promedio como un número decimal
+
+        System.out.println("Suma de los números: " + suma);
+        System.out.println("Promedio de los números: " + promedio);
+    }
+}
+
+
+Ejercicio 20)
+import java.util.Random;
+
+public class ejercicio20 {
+    public static void main(String[] args) {
+        Random random = new Random();
+
+        int contador = 0;
+        int minimo = Integer.MAX_VALUE; // Inicializamos el mínimo con el valor máximo posible
+        int maximo = Integer.MIN_VALUE; // Inicializamos el máximo con el valor mínimo posible
+
+        do {
+            int numero = random.nextInt(100); // Genera un número aleatorio entre 0 y 99
+            System.out.println("Número generado: " + numero);
+
+            if (numero < minimo) {
+                minimo = numero;
+            }
+
+            if (numero > maximo) {
+                maximo = numero;
+            }
+
+            contador++;
+        } while (contador < 10);
+
+        System.out.println("Mínimo: " + minimo);
+        System.out.println("Máximo: " + maximo);
+    }
+}
+
+
+
+Extras realizados por diversion:
+
+Ejercicio 21)
+import java.util.Scanner;
+
+public class ejercicio21 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese la categoría del empleado (A, B, C): ");
+        char categoria = scanner.next().charAt(0);
+
+        System.out.print("Ingrese la antigüedad del empleado (en años): ");
+        int antiguedad = scanner.nextInt();
+
+        System.out.print("Ingrese el sueldo bruto del empleado: ");
+        double sueldoBruto = scanner.nextDouble();
+
+        double sueldoNeto = sueldoBruto;
+
+        if (antiguedad >= 1 && antiguedad <= 5) {
+            sueldoNeto += sueldoBruto * 0.05;
+        } else if (antiguedad >= 6 && antiguedad <= 10) {
+            sueldoNeto += sueldoBruto * 0.1;
+        } else if (antiguedad > 10) {
+            sueldoNeto += sueldoBruto * 0.3;
+        }
+
+        switch (categoria) {
+            case 'A':
+                sueldoNeto += 1000;
+                break;
+            case 'B':
+                sueldoNeto += 2000;
+                break;
+            case 'C':
+                sueldoNeto += 3000;
+                break;
+        }
+
+        System.out.println("El sueldo neto del empleado es: " + sueldoNeto);
+    }
+}
+
+
+Ejercicio 22) ***(SOLO PARA VALIENTES)***
+
+public class ejercicio22 {
+    public static void main(String[] args) {
+        int contador = 0;
+
+        while (contador < 10) {
+            // Generar categoría al azar
+            char categoria = generarCategoriaAleatoria();
+
+            // Generar antigüedad al azar entre 1 y 15 años
+            int antiguedad = generarAntiguedadAleatoria();
+
+            // Generar sueldo al azar entre 1000 y 5000
+            double sueldo = generarSueldoAleatorio();
+
+            double sueldoNeto = sueldo;
+
+            // Aumento del sueldo según la antigüedad
+            if (antiguedad >= 1 && antiguedad <= 5) {
+                sueldoNeto += sueldo * 0.05;
+            } else if (antiguedad >= 6 && antiguedad <= 10) {
+                sueldoNeto += sueldo * 0.1;
+            } else if (antiguedad > 10) {
+                sueldoNeto += sueldo * 0.3;
+            }
+
+            // Plus según la categoría
+            int plus = 0;
+            switch (categoria) {
+                case 'A':
+                    plus = 1000;
+                    break;
+                case 'B':
+                    plus = 2000;
+                    break;
+                case 'C':
+                    plus = 3000;
+                    break;
+            }
+            sueldoNeto += plus;
+
+            // Verificar si el sueldo neto está dentro del rango correcto
+            if (sueldoNeto >= 1000 && sueldoNeto <= 10000) {
+                System.out.println("Empleado " + (contador + 1) + ":");
+                System.out.println("Categoría: " + categoria);
+                System.out.println("Antigüedad: " + antiguedad + " años");
+                System.out.println("Sueldo bruto: " + sueldo);
+                System.out.println("Sueldo neto: " + sueldoNeto);
+                System.out.println();
+
+                contador++;
+            }
+        }
+    }
+
+    private static char generarCategoriaAleatoria() {
+        int randomIndex = (int) (Math.random() * 3);
+        return (char) ('A' + randomIndex);
+    }
+
+    private static int generarAntiguedadAleatoria() {
+        return (int) (Math.random() * 15) + 1;
+    }
+
+    private static double generarSueldoAleatorio() {
+        return Math.random() * 4000 + 1000;
+    }
+}
+
+/*
+En este programa, se utiliza la función Math.random() para generar valores aleatorios. La función generarCategoriaAleatoria() genera una categoría aleatoria (A, B o C), la función generarAntiguedadAleatoria() genera una antigüedad aleatoria entre 1 y 15 años, y la función generarSueldoAleatorio() genera un sueldo aleatorio entre 1000 y 5000.
+
+Dentro del ciclo while, se realiza el cálculo del sueldo neto utilizando las mismas reglas que se mencionaron anteriormente. Después, se verifica si el sueldo neto está dentro del rango correcto (entre 1000 y 10000). Solo se incrementa
+*/
